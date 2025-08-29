@@ -37,4 +37,20 @@ function handleClear(){
   callHistory.innerHTML='';
 }
 
+// copy data by clicking button
+
+function copyData (numberId){
+  const number = document.getElementById(numberId).innerText;
+  const numberToCopy = parseInt(number);
+  
+  navigator.clipboard.writeText(numberToCopy)
+  .then(()=> {
+    alert("Copied to clipboard: " + numberToCopy);
+  })
+  .catch(err => {
+      console.error("Failed to copy: ", err);
+    });
+    
+}
+
 
