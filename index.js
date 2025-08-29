@@ -6,18 +6,35 @@ function handleHurtNumber() {
   heartEl.innerText = heartBit;
 }
 // handle call button
+const callHistory = document.getElementById('call-history');
+
+
 function handleCall(titleId, numberId) {
   const displayPointElement = document.getElementById("display-point");
   const title = document.getElementById(titleId).innerText;
   const number = document.getElementById(numberId).innerText;
   const currentValue = parseInt(displayPointElement.innerText);
-  if(currentValue < 20){
+
+  if (currentValue < 20) {
     alert('Insufficient coin')
-  }else{
+  } else {
     alert(title + number);
     const calculatedPoint = currentValue - 20;
     displayPointElement.innerText = calculatedPoint;
+    const currentTime = new Date().toLocaleTimeString();
+    callHistory.innerHTML += ` <div class="flex justify-between items-center mt-5 bg-blue-50 px-4 py-4 rounded-xl ">
+                    <div class="">
+                        <h1 class="font-bold text-xl">${title}</h1>
+                        <p>${number}</p>
+                    </div>
+                    <p>${currentTime}</p>
+                </div>`;
   }
+}
+
+// clear the call section
+function handleClear(){
+  callHistory.innerHTML='';
 }
 
 
