@@ -33,24 +33,26 @@ function handleCall(titleId, numberId) {
 }
 
 // clear the call section
-function handleClear(){
-  callHistory.innerHTML='';
-}
+// function handleClear(){
+//   callHistory.innerHTML='';
+// }
 
 // copy data by clicking button
 
-function copyData (numberId){
+
+function copyData(numberId) {
   const number = document.getElementById(numberId).innerText;
-  const numberToCopy = parseInt(number);
-  
+  const numberToCopy = number;
+
+  const copyCountText = document.getElementById('copy-num');
+  const copyCountNumber = parseInt(copyCountText.innerText) || 0;
+  const increaseCopyCount = copyCountNumber + 1;
+  copyCountText.innerText = increaseCopyCount; 
   navigator.clipboard.writeText(numberToCopy)
-  .then(()=> {
-    alert("Copied to clipboard: " + numberToCopy);
-  })
-  .catch(err => {
+    .then(() => {
+      alert("Copied to clipboard: " + numberToCopy);
+    })
+    .catch(err => {
       console.error("Failed to copy: ", err);
     });
-    
 }
-
-

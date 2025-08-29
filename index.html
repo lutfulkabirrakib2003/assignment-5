@@ -20,7 +20,7 @@
 <body class="">
 
 
-    <nav class="flex justify-between items-center mx-5 my-2 m ">
+    <nav class="flex justify-between items-center mx-5 my-2 ">
         <div class="flex gap-2">
             <img src="assets/logo.png" alt="" class="w-12 h-12 mt-2">
             <h1 class="font-bold text-2xl text-[#006747] ">Emergency <br> Service</h1>
@@ -35,7 +35,7 @@
                 <img src="assets/coin.png" alt="" class="w-7 h-7">
             </div>
             <div class="flex gap-1 bg-[#00A63E] p-2 w-20 h-11 rounded-full justify-center items-center text-white">
-                <h3 class="">2</h3>
+                <h3 id="copy-num">0</h3>
                 <h1>copy</h1>
             </div>
         </div>
@@ -47,8 +47,8 @@
         <p class="text-white mt-3">Government Emergency Services at Your Fingertip – A Project by Government of the
             People’s Republic of Bangladesh</p>
     </section>
-    <main class="flex gap-10 bg-green-100">
-        <div class="w-8/12 grid md:grid-cols-3 gap-4 flex-grow my-5 ml-5">
+    <main class="md:flex gap-10 bg-green-100">
+        <div class="md:w-8/12 grid md:grid-cols-3 gap-4 flex-grow my-5 mx-5">
             <!-- cards -->
             <div class="flex flex-col space-y-2 shadow-md bg-white">
                 <div class="flex justify-between items-center px-4 pt-4">
@@ -62,7 +62,7 @@
                     <h2 id="number" class="font-bold text-3xl">999</h2>
                     <span class=" block bg-blue-100 w-7 h-7 p-1 rounded-lg ">All</span>
                 </div>
-                <div class="flex justify-between items-center px-4 mb-4">
+                <div class="flex justify-between items-center mb-4 ">
                     <button onclick="copyData('number')" class="btn px-8 bg-transparent rounded-xl hover:bg-green-500">
                         <i class="fa-regular fa-clone mr-1"></i>
                         copy
@@ -87,7 +87,7 @@
                     <h2 id="number-police" class="font-bold text-3xl">999</h2>
                     <span class=" block bg-blue-100 w-15 h-7 p-1 rounded-lg ">Police</span>
                 </div>
-                <div class="flex justify-between items-center px-4 mb-4">
+                <div class="flex justify-between items-center mb-4">
                     <button onclick="copyData('number-police')" class="btn px-8 bg-transparent rounded-xl hover:bg-green-500">
                         <i class="fa-regular fa-clone mr-1"></i>
                         copy
@@ -112,7 +112,7 @@
                     <h2 id="fire-number" class="font-bold text-3xl">999</h2>
                     <span id="" class=" block bg-blue-100 w-10 h-7 p-1 rounded-lg ">Fire </span>
                 </div>
-                <div class="flex justify-between items-center px-4 mb-4">
+                <div class="flex justify-between items-center mb-4">
                     <button onclick="copyData('fire-number')" class="btn px-8 bg-transparent rounded-xl hover:bg-green-500">
                         <i class="fa-regular fa-clone mr-1"></i>
                         copy
@@ -137,7 +137,7 @@
                     <h2 id="ambulanceNumber" class="font-bold text-3xl">1994-999999</h2>
                     <span class=" block bg-blue-100 w-15 h-7 p-1 rounded-lg ">Health</span>
                 </div>
-                <div class="flex justify-between items-center px-4 mb-4">
+                <div class="flex justify-between items-center mb-4">
                     <button onclick="copyData('ambulanceNumber')" class="btn px-8 bg-transparent rounded-xl hover:bg-green-500">
                         <i class="fa-regular fa-clone mr-1"></i>
                         copy
@@ -162,7 +162,7 @@
                     <h2 id="women-number" class="font-bold text-3xl">109</h2>
                     <span class=" block bg-blue-100 w-10 h-7 p-1 rounded-lg ">Help</span>
                 </div>
-                <div class="flex justify-between items-center px-4 mb-4">
+                <div class="flex justify-between items-center mb-4">
                     <button onclick="copyData('women-number')" class="btn px-8 bg-transparent rounded-xl hover:bg-green-500">
                         <i class="fa-regular fa-clone mr-1"></i>
                         copy
@@ -187,7 +187,7 @@
                     <h2 id="ac-number" class="font-bold text-3xl">106</h2>
                     <span class=" block bg-blue-100 w-10 h-7 p-1 rounded-lg ">Govt</span>
                 </div>
-                <div class="flex justify-between items-center px-4 mb-4">
+                <div class="flex justify-between items-center mb-4">
                     <button onclick="copyData('ac-number')" class="btn px-8 bg-transparent rounded-xl hover:bg-green-500">
                         <i class="fa-regular fa-clone mr-1"></i>
                         copy
@@ -212,7 +212,7 @@
                     <h2 id="ec-number" class="font-bold text-3xl">16216</h2>
                     <span class=" block bg-blue-100 w-20 h-7 p-1 rounded-lg ">Electricity</span>
                 </div>
-                <div class="flex justify-between items-center px-4 mb-4">
+                <div class="flex justify-between items-center mb-4">
                     <button onclick="copyData('ec-number')" class="btn px-8 bg-transparent rounded-xl hover:bg-green-500">
                         <i class="fa-regular fa-clone mr-1"></i>
                         copy
@@ -237,7 +237,7 @@
                     <h2 id="bc-number" class="font-bold text-3xl">166445</h2>
                     <span class=" block bg-blue-100 w-10 h-7 p-1 rounded-lg ">NGO</span>
                 </div>
-                <div class="flex justify-between items-center px-4 mb-4">
+                <div class="flex justify-between items-center mb-4">
                     <button onclick="copyData('bc-number')" class="btn px-8 bg-transparent rounded-xl hover:bg-green-500">
                         <i class="fa-regular fa-clone mr-1"></i>
                         copy
@@ -262,7 +262,7 @@
                     <h2 id="br-number" class="font-bold text-3xl">106</h2>
                     <span class=" block bg-blue-100 w-12 h-7 p-1 rounded-lg ">Travel</span>
                 </div>
-                <div class="flex justify-between items-center px-4 mb-4">
+                <div class="flex justify-between items-center mb-4">
                     <button onclick="copyData('br-number')" class="btn px-8 bg-transparent rounded-xl hover:bg-green-500">
                         <i class="fa-regular fa-clone mr-1"></i>
                         copy
@@ -276,7 +276,7 @@
             </div>
         </div>
         <!-- call history section start -->
-        <div class="w-4/12 bg-white my-5 mx-5 px-3 py-5">
+        <div class="md:w-4/12 bg-white my-5 mx-5 px-3 py-5">
             <div class="flex justify-between items-center">
                 <div class="flex gap-2">
                     <i class="fa-regular fa-clock mt-1.5 "></i>
@@ -289,13 +289,7 @@
                 </div>
             </div>
             <div id="call-history">
-                <!-- <div class="flex justify-between items-center mt-5 bg-blue-50 px-4 py-4 rounded-xl ">
-                    <div class="">
-                        <h1 class="font-bold text-xl">Fire Service Number</h1>
-                        <p>999</p>
-                    </div>
-                    <p>11:36:58</p>
-                </div> -->
+               
             </div>
         </div>
         <!-- call history section end -->
