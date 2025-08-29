@@ -17,33 +17,276 @@
 
 </head>
 
-<body>
-    <nav class="flex justify-between mx-5 my-2 ">
+<body class="">
+
+
+    <nav class="flex justify-between items-center mx-5 my-2 ">
         <div class="flex gap-2">
             <img src="assets/logo.png" alt="" class="w-12 h-12 mt-2">
             <h1 class="font-bold text-2xl text-[#006747] ">Emergency <br> Service</h1>
         </div>
         <div class="flex gap-5">
             <div class="flex gap-2 bg-[#41FF6B]/10 p-3 w-20 h-11 rounded-3xl justify-center items-center ">
-                <h3 class="">0</h3>
-                <img src="assets/heart.png" alt="" class="w-7 h-7 ">
+                <h3 id="heart-2">0</h3>
+                <img id="" src="assets/heart.png" alt="" class="w-7 h-7 ">
             </div>
             <div class="flex gap-2  bg-[#41FF6B]/10 p-2 w-20 h-11 rounded-3xl justify-center items-center">
-                <h3>100</h3>
-                <img src="assets/coin.png" alt="" class="w-7 h-7">
+                <h3 id="display-point">100</h3>
+                <img  src="assets/coin.png" alt="" class="w-7 h-7">
             </div>
             <div class="flex gap-1 bg-[#00A63E] p-2 w-20 h-11 rounded-full justify-center items-center text-white">
                 <h3 class="">2</h3>
                 <h1>copy</h1>
             </div>
-         </div>
+        </div>
     </nav>
-    <section class="h-50 w-full bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] flex justify-center items-center flex-col">
+    <section
+        class="h-50 w-full bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] flex justify-center items-center flex-col">
         <img src="assets/logo.png" alt="" class="w-16 h-16">
         <h1 class="font-bold text-white text-2xl mt-3">Emergency Service Directory</h1>
-        <p class="text-white mt-3">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
-</section>
+        <p class="text-white mt-3">Government Emergency Services at Your Fingertip – A Project by Government of the
+            People’s Republic of Bangladesh</p>
+    </section>
+    <main class="flex gap-10 bg-green-100">
+        <div class="w-8/12 grid md:grid-cols-3 gap-4 flex-grow my-5 ml-5">
+            <!-- cards -->
+            <div class="flex flex-col space-y-2 shadow-md bg-white">
+                <div class="flex justify-between items-center px-4 pt-4">
+                    <img src="assets/emergency.png" alt="" class="w-7 
+                h-7">
+                  <i onclick="handleHurtNumber()" id="heart" class="fa-regular fa-heart text-xl "></i>
+                </div>
+                <div class="px-4 space-y-1">
+                    <h1 id="title" class="font-bold font-3xl">National Emergency Number</h1>
+                    <h3>National Emergency</h3>
+                    <h2 id="number" class="font-bold text-3xl">999</h2>
+                    <span class=" block bg-blue-100 w-7 h-7 p-1 rounded-lg ">All</span>
+                </div>
+                <div class="flex justify-between items-center px-4 mb-4">
+                    <button class="btn px-8 bg-transparent rounded-xl hover:bg-green-500">
+                        <i class="fa-regular fa-clone mr-1"></i>
+                        copy
+                        <button>
+                            <button onclick="handleCall('title','number')" class="btn px-8 ml-2 rounded-xl bg-green-500 text-white">
+                                <i class="fa-solid fa-phone mr-1"></i>
+                                call
+                            </button>
+                </div>
+            </div>
+            <!-- cards -->
+            <div class="flex flex-col space-y-2 shadow-md bg-white">
+                <div class="flex justify-between items-center px-4 pt-4">
+                    <img src="assets/police.png" alt="" class="w-7 
+                h-7">
+                    <i onclick="handleHurtNumber()" id="policeHeart" class="fa-regular fa-heart card-heart text-xl"></i>
+                </div>
+                <div class="px-4 space-y-1">
+                    <h1 id="title-police" class="font-bold font-3xl">Police Emergency Number</h1>
+                    <h3>Police</h3>
+                    <h2 id="number-police" class="font-bold text-3xl">999</h2>
+                    <span class=" block bg-blue-100 w-15 h-7 p-1 rounded-lg ">Police</span>
+                </div>
+                <div class="flex justify-between items-center px-4 mb-4">
+                    <button class="btn px-8 bg-transparent rounded-xl hover:bg-green-500">
+                        <i class="fa-regular fa-clone mr-1"></i>
+                        copy
+                        <button>
+                            <button onclick="handleCall('title-police', 'number-police')" class="btn px-8 ml-2 rounded-xl bg-green-500 text-white">
+                                <i class="fa-solid fa-phone mr-1"></i>
+                                call
+                            </button>
+                </div>
+            </div>
+            <!-- cards -->
+            <div class="flex flex-col space-y-2 shadow-md bg-white">
+                <div class="flex justify-between items-center px-4 pt-4">
+                    <img src="assets/fire-service.png" alt="" class="w-7 
+                h-7">
+                    <i onclick="handleHurtNumber()" class="fa-regular fa-heart text-xl"></i>
+                </div>
+                <div class="px-4 space-y-1">
+                    <h1 id="id-fire" class="font-bold font-3xl"> Fire service Number</h1>
+                    <h3>Fire Service</h3>
+                    <h2 id="fire-number" class="font-bold text-3xl">999</h2>
+                    <span id="" class=" block bg-blue-100 w-10 h-7 p-1 rounded-lg ">Fire </span>
+                </div>
+                <div class="flex justify-between items-center px-4 mb-4">
+                    <button class="btn px-8 bg-transparent rounded-xl hover:bg-green-500">
+                        <i class="fa-regular fa-clone mr-1"></i>
+                        copy
+                        <button>
+                            <button onclick="handleCall('id-fire','fire-number')" class="btn px-8 ml-2 rounded-xl bg-green-500 text-white">
+                                <i class="fa-solid fa-phone mr-1"></i>
+                                call
+                            </button>
+                </div>
+            </div>
+            <!-- cards -->
+            <div class="flex flex-col space-y-2 shadow-md bg-white">
+                <div class="flex justify-between items-center px-4 pt-4">
+                    <img src="assets/ambulance.png" alt="" class="w-7 
+                h-7">
+                    <i onclick="handleHurtNumber()" class="fa-regular fa-heart  text-xl"></i>
+                </div>
+                <div class="px-4 space-y-1">
+                    <h1 id="ambulance" class="font-bold font-3xl">Ambulance service</h1>
+                    <h3>Ambulance</h3>
+                    <h2 id="ambulanceNumber" class="font-bold text-3xl">1994-999999</h2>
+                    <span class=" block bg-blue-100 w-15 h-7 p-1 rounded-lg ">Health</span>
+                </div>
+                <div class="flex justify-between items-center px-4 mb-4">
+                    <button class="btn px-8 bg-transparent rounded-xl hover:bg-green-500">
+                        <i class="fa-regular fa-clone mr-1"></i>
+                        copy
+                        <button>
+                            <button onclick="handleCall('ambulance','ambulanceNumber')" class="btn px-8 ml-2 rounded-xl bg-green-500 text-white">
+                                <i class="fa-solid fa-phone mr-1"></i>
+                                call
+                            </button>
+                </div>
+            </div>
+            <!-- cards -->
+            <div class="flex flex-col space-y-2 shadow-md bg-white">
+                <div class="flex justify-between items-center px-4 pt-4">
+                    <img src="assets/emergency.png" alt="" class="w-7 
+                h-7">
+                    <i onclick="handleHurtNumber()" class="fa-regular fa-heart text-xl"></i>
+                </div>
+                <div class="px-4 space-y-1">
+                    <h1 id="Women" class="font-bold font-3xl">Women & Child Helpline</h1>
+                    <h3>Women & Child Helpline</h3>
+                    <h2 id="women-number" class="font-bold text-3xl">109</h2>
+                    <span class=" block bg-blue-100 w-10 h-7 p-1 rounded-lg ">Help</span>
+                </div>
+                <div class="flex justify-between items-center px-4 mb-4">
+                    <button class="btn px-8 bg-transparent rounded-xl hover:bg-green-500">
+                        <i class="fa-regular fa-clone mr-1"></i>
+                        copy
+                        <button>
+                            <button onclick="handleCall('Women','women-number')" class="btn px-8 ml-2 rounded-xl bg-green-500 text-white">
+                                <i class="fa-solid fa-phone mr-1"></i>
+                                call
+                            </button>
+                </div>
+            </div>
+            <!-- cards -->
+            <div class="flex flex-col space-y-2 shadow-md bg-white">
+                <div class="flex justify-between items-center px-4 pt-4">
+                    <img src="assets/emergency.png" alt="" class="w-7 
+                h-7">
+                    <i onclick="handleHurtNumber()" class="fa-regular fa-heart text-xl"></i>
+                </div>
+                <div class="px-4 space-y-1">
+                    <h1 id="ac" class="font-bold font-3xl">Anti-Corruption Helpline</h1>
+                    <h3>Anti corruption</h3>
+                    <h2 id="ac-number" class="font-bold text-3xl">106</h2>
+                    <span class=" block bg-blue-100 w-10 h-7 p-1 rounded-lg ">Govt</span>
+                </div>
+                <div class="flex justify-between items-center px-4 mb-4">
+                    <button class="btn px-8 bg-transparent rounded-xl hover:bg-green-500">
+                        <i class="fa-regular fa-clone mr-1"></i>
+                        copy
+                        <button>
+                            <button onclick="handleCall('ac','ac-number')" class="btn px-8 ml-2 rounded-xl bg-green-500 text-white">
+                                <i class="fa-solid fa-phone mr-1"></i>
+                                call
+                            </button>
+                </div>
+            </div>
+            <!-- cards -->
+            <div class="flex flex-col space-y-2 shadow-md bg-white">
+                <div class="flex justify-between items-center px-4 pt-4">
+                    <img src="assets/emergency.png" alt="" class="w-7 
+                h-7">
+                    <i onclick="handleHurtNumber()" class="fa-regular fa-heart text-xl"></i>
+                </div>
+                <div class="px-4 space-y-1">
+                    <h1 id="ec" class="font-bold font-3xl">Electricity Helpline</h1>
+                    <h3>Electricity Outage</h3>
+                    <h2 id="ec-number" class="font-bold text-3xl">16216</h2>
+                    <span class=" block bg-blue-100 w-20 h-7 p-1 rounded-lg ">Electricity</span>
+                </div>
+                <div class="flex justify-between items-center px-4 mb-4">
+                    <button class="btn px-8 bg-transparent rounded-xl hover:bg-green-500">
+                        <i class="fa-regular fa-clone mr-1"></i>
+                        copy
+                        <button>
+                            <button onclick="handleCall('ec','ec-number')" class="btn px-8 ml-2 rounded-xl bg-green-500 text-white">
+                                <i class="fa-solid fa-phone mr-1"></i>
+                                call
+                            </button>
+                </div>
+            </div>
+            <!-- cards -->
+            <div class="flex flex-col space-y-2 shadow-md bg-white">
+                <div class="flex justify-between items-center px-4 pt-4">
+                    <img src="assets/emergency.png" alt="" class="w-7 
+                h-7">
+                    <i onclick="handleHurtNumber()" class="fa-regular fa-heart text-xl"></i>
+                </div>
+                <div class="px-4 space-y-1">
+                    <h1 id="bc" class="font-bold font-3xl"> Brac Helpline</h1>
+                    <h3>Brac</h3>
+                    <h2 id="bc-number" class="font-bold text-3xl">166445</h2>
+                    <span class=" block bg-blue-100 w-10 h-7 p-1 rounded-lg ">NGO</span>
+                </div>
+                <div class="flex justify-between items-center px-4 mb-4">
+                    <button class="btn px-8 bg-transparent rounded-xl hover:bg-green-500">
+                        <i class="fa-regular fa-clone mr-1"></i>
+                        copy
+                        <button>
+                            <button onclick="handleCall('bc','bc-number')" class="btn px-8 ml-2 rounded-xl bg-green-500 text-white">
+                                <i class="fa-solid fa-phone mr-1"></i>
+                                call
+                            </button>
+                </div>
+            </div>
+            <!-- cards -->
+            <div class="flex flex-col space-y-2 shadow-md bg-white">
+                <div class="flex justify-between items-center px-4 pt-4">
+                    <img src="assets/emergency.png" alt="" class="w-7 
+                h-7">
+                    <i onclick="handleHurtNumber()" class="fa-regular fa-heart text-xl"></i>
+                </div>
+                <div class="px-4 space-y-1">
+                    <h1 id="br" class="font-bold font-3xl">Bangladesh Railway Helpline </h1>
+                    <h3>Bangladesh Railway</h3>
+                    <h2 id="br-number" class="font-bold text-3xl">106</h2>
+                    <span class=" block bg-blue-100 w-12 h-7 p-1 rounded-lg ">Travel</span>
+                </div>
+                <div class="flex justify-between items-center px-4 mb-4">
+                    <button class="btn px-8 bg-transparent rounded-xl hover:bg-green-500">
+                        <i class="fa-regular fa-clone mr-1"></i>
+                        copy
+                        <button>
+                            <button onclick="handleCall('br','br-number')" class="btn px-8 ml-2 rounded-xl bg-green-500 text-white">
+                                <i class="fa-solid fa-phone mr-1"></i>
+                                call
+                            </button>
+                </div>
+            </div>
+        </div>
+        <!-- call history section start -->
+        <div class="w-4/12 bg-white my-5 mx-5 px-3 py-5">
+            <div class="flex justify-between items-center">
+                <div class="flex gap-2">
+                    <i class="fa-regular fa-clock mt-1.5 "></i>
+                    <p class="text-xl font-bold">Call History</p>
+                </div>
+                <div>
+                    <button class="btn px-8 py-7  text-xl rounded-3xl bg-green-500 text-white">
+                        Clear
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- call history section end -->
+        </div>
+    </main>
+    <script src="index.js"></script>
+
 
 </body>
+
 
 </html>
